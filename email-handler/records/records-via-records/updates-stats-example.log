@@ -1,0 +1,15 @@
+Element  0:                                            Update date
+Element  1:                                            Count is consistent boolean (Consistency of tallies)
+Element  2:                                            Match between (gmail msgs) to retrieve and process (boolean)
+Element  3:                                            # of (gmail msgs) to retrieve
+Element  4:                                            # of these (msgs) that are new
+Element  5:                                            # of these (msgs) that are old (containing fails/retries)
+Element  6 &  7 &  8 &  9 (or  6a &  6b &  6c &  6d):  # of (gmail msgs), (mn pcs), (pt pcs), (pcs) to process
+Element 10 & 11 & 12 & 13 (or  7a &  7b &  7c &  7d):  # of these (msgs), (mn pcs), (pt pcs), (pcs) that are new
+Element 14 & 15 & 16 & 17 (or  8a &  8b &  8c &  8d):  # of these (msgs), (mn pcs), (pt pcs), (pcs) that are old/retry
+Element 18 & 19 & 20 & 21 (or  9a &  9b &  9c &  9d):  # of (gmail msgs), (mn pcs), (pt pcs), (msg pieces) processed
+Element 22 & 23 & 24      (or 10a & 10b & 10c):        # of these (mn pcs), (pt pcs), (pcs) added to database (db)
+Element 25 & 26 & 27      (or 11a & 11b & 11c):        # of these (mn pcs), (pt pcs), (pcs) were dups (so not added)
+Element 28 & 29 & 30      (or 12a & 12b & 12c):        # of these (mn pcs), (pt pcs), (pcs) with fails in add-to-db
+Element 31 & 32 & 33      (or 13a & 13b & 13c):        # of these (mn pcs), (pt pcs), (pcs) not recognized as data
+'2021-07-06T00:56:23.487 Tue (UTC-07:00|PDT) 1625558183487', true, true, 757, 757, 0, 757, 757, 0, 757, 757, 757, 0, 757, 0, 0, 0, 0, 757, 757, 0, 757, 131, 0, 131, 0, 0, 0, 0, 0, 0, 626, 0, 626

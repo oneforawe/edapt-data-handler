@@ -1,0 +1,9 @@
+This file is for simple record-keeping of some authorization / credentialing
+activities.  The app itself does not use this file.  Delete contents at your
+discretion and leisure.
+
+'2021-06-30T21:16:51.944 Wed (UTC-07:00|PDT) 1625113011944', executed getNewTokenViaUserPrompt (via getLabelIDs)
+'2021-07-01T22:20:23.260 Thu (UTC-07:00|PDT) 1625203223260', executed getNewTokenViaUserPrompt (via getLabelIDs)
+'2021-07-01T22:20:24.236 Thu (UTC-07:00|PDT) 1625203224236', fail `callback` execution in `authorize`: messagesToAdd is not defined
+'2021-07-01T22:22:57.599 Thu (UTC-07:00|PDT) 1625203377599', fail `callback` execution in `authorize`: The GmailAPI couldn't get message: Error: Too many concurrent requests for user
+'2021-07-01T22:22:57.636 Thu (UTC-07:00|PDT) 1625203377636', fail `callback` execution in `authorize`: The GmailAPI couldn't get message: Error: Too many concurrent requests for user

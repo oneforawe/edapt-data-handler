@@ -1,0 +1,39 @@
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.center-table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table-left {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.table-right {
+  text-align: left;
+  font-weight: bold;
+}
+
+.add-space {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.intro-to-demo-mode {
+  background-color: rgb(255, 229, 219);
+  width: 75vw;
+}
+
+.intro-to-demo-mode > * {
+  text-align: center;
+}
+
+.bottom-spacing {
+  margin-bottom: 60px;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "edapt-data-handler",
+  "version": "1.0.0",
+  "description": "EDAPT = Email-Data Assistant & Processor Tool: A Web-App for Data Ingestion via Email and Data Viewing & Downloading via Website",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-top":           "npm --prefix ./ install ./",
+    "install-database-api":  "npm --prefix ./database-api/ install ./database-api/",
+    "install-email-handler": "npm --prefix ./email-handler/ install ./email-handler/",
+    "install-web-app-top":   "npm --prefix ./web-app/ install ./web-app/",
+    "install-web-client":    "npm --prefix ./web-app/client/ install ./web-app/client/",
+    "install-web-server":    "npm --prefix ./web-app/server/ install ./web-app/server/",
+    "install-web-app": "npm run install-web-app-top && npm run install-web-client && npm run install-web-server",
+    "install-all": "npm run install-top && npm run install-database-api && npm run install-email-handler && npm run install-web-app",
+    "dev":      "node edapt-mode.js && cd web-app && npm run dev",
+    "dev-demo": "node edapt-mode.js demo && cd web-app && npm run dev-demo",
+    "build-prod": "node edapt-mode.js && cd web-app && npm run build",
+    "build-demo": "node edapt-mode.js demo && cd web-app && npm run build",
+    "serve-dev":       "node edapt-mode.js && cd web-app && npm run serve-dev",
+    "serve-demo":      "node edapt-mode.js demo && cd web-app && npm run serve-demo",
+    "serve-prod-test": "node edapt-mode.js && cd web-app && npm run serve-prod-test",
+    "serve-prod":      "node edapt-mode.js && cd web-app && npm run serve-prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oneforawe/edapt-data-handler.git"
+  },
+  "author": "Andrew Forrester <andrew@andrew-forrester.com>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/oneforawe/edapt-data-handler/issues"
+  },
+  "homepage": "https://github.com/oneforawe/edapt-data-handler#readme"
+}

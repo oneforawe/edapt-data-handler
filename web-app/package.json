@@ -1,0 +1,31 @@
+{
+  "name": "web-app",
+  "version": "1.0.0",
+  "description": "Web server and web client code for EDAPT.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-dev": "cd client && npm run dev",
+    "client-build": "cd client && npm run build",
+    "client-serve": "cd client && npm run serve",
+    "server-dev":       "cd server && npm run start-dev",
+    "server-dev-demo":  "cd server && npm run start-dev-demo",
+    "server-demo": "cd server && npm run start-demo",
+    "server-prod": "cd server && npm run start-prod",
+    "mode": "node ./web-app-mode/feed-mode.js",
+    "dev":      "npm run mode && concurrently \"npm run client-dev\" \"npm run server-dev\"",
+    "dev-demo": "npm run mode && concurrently \"npm run client-dev\" \"npm run server-dev-demo\"",
+    "build": "npm run mode && npm run client-build",
+    "serve-dev":       "npm run mode && npm run server-dev",
+    "serve-demo":      "npm run mode && npm run server-demo",
+    "serve-prod-test": "npm run mode && npm run server-prod-test",
+    "serve-prod":      "npm run mode && npm run server-prod",
+    "deploy": "npm run mode && npm run build && npm run server-prod"
+  },
+  "keywords": [],
+  "author": "Andrew Forrester <andrew@andrew-forrester.com>",
+  "license": "Unlicense",
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  }
+}

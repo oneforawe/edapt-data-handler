@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev":       "node server.js server-port=8080",
+    "start-dev-demo":  "node server.js server-port=8080 demo",
+    "start-demo":      "node server.js server-port=8080 demo",
+    "start-prod-test": "node server.js server-port=80",
+    "start-prod":      "node server.js server-port=8080"
+  },
+  "keywords": [],
+  "author": "Andrew Forrester <andrew@andrew-forrester.com>",
+  "license": "Unlicense",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "objects-to-csv": "^1.3.6",
+    "shelljs": "^0.8.4"
+  }
+}

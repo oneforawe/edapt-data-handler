@@ -1,0 +1,2 @@
+For EDAPT with example.com (at sub.example.com),
+  used Let's Encrypt certbot with contact my.email@address.com.

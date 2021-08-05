@@ -1,0 +1,31 @@
+const reportMockup = {
+  // first attribute 'id' will be added by default
+  reportForDate: '10/21/1970',
+  reportForWeekday: 'Wed',
+  reportSendDate: '05/16/2021 00:00:59',
+  gmailMsgDate: 'Tue, 1 Jun 2021 18:39:19 -0700',
+  reportIsConsistent: true,
+  bay: 1,
+  netMoneyCalc: 272.45,
+  salesTotal: 123.45,
+  salesCash: 1.45,
+  salesCredit: 122.00,
+  cashIn: 150.50,
+  cashOut: 0.05,
+  cashNet: 150.45,
+  cashNotRefunded: 149.00,
+  creditIn: 124.03,
+  creditRefunds: 2.03,
+  creditNet: 122.00,
+  unitsWashTotal: 11,
+  unitsWashCash: 1,
+  unitsWashCredit: 5,
+  unitsWashAccount: 2,
+  unitsWashEmployee: 3,
+  unitsWashW: 2,
+  unitsWashP: 2,
+  unitsWashD: 5,
+  unitsWashE: 2,
+}
+
+module.exports = reportMockup

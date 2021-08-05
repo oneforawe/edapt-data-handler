@@ -1,0 +1,19 @@
+{
+  "name": "database-api",
+  "version": "1.0.0",
+  "description": "The database API for EDAPT.",
+  "main": "database-tools.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Andrew Forrester <andrew@andrew-forrester.com>",
+  "license": "Unlicense",
+  "dependencies": {
+    "@stdlib/random-base-poisson": "^0.0.4",
+    "mysql2": "^2.2.5",
+    "requirejs": "^2.3.6",
+    "sequelize": "^6.6.2",
+    "winston": "^3.3.3"
+  }
+}

@@ -1,0 +1,26 @@
+Element  0:                                            Update date
+Element  1:                                            Count is consistent boolean (Consistency of tallies)
+Element  2:                                            Match between (gmail msgs) to retrieve and process (boolean)
+Element  3:                                            # of (gmail msgs) to retrieve
+Element  4:                                            # of these (msgs) that are new
+Element  5:                                            # of these (msgs) that are old (containing fails/retries)
+Element  6 &  7 &  8 &  9 (or  6a &  6b &  6c &  6d):  # of (gmail msgs), (mn pcs), (pt pcs), (pcs) to process
+Element 10 & 11 & 12 & 13 (or  7a &  7b &  7c &  7d):  # of these (msgs), (mn pcs), (pt pcs), (pcs) that are new
+Element 14 & 15 & 16 & 17 (or  8a &  8b &  8c &  8d):  # of these (msgs), (mn pcs), (pt pcs), (pcs) that are old/retry
+Element 18 & 19 & 20 & 21 (or  9a &  9b &  9c &  9d):  # of (gmail msgs), (mn pcs), (pt pcs), (msg pieces) processed
+Element 22 & 23 & 24      (or 10a & 10b & 10c):        # of these (mn pcs), (pt pcs), (pcs) added to database (db)
+Element 25 & 26 & 27      (or 11a & 11b & 11c):        # of these (mn pcs), (pt pcs), (pcs) were dups (so not added)
+Element 28 & 29 & 30      (or 12a & 12b & 12c):        # of these (mn pcs), (pt pcs), (pcs) with fails in add-to-db
+Element 31 & 32 & 33      (or 13a & 13b & 13c):        # of these (mn pcs), (pt pcs), (pcs) not recognized as data
+'2021-06-30T17:07:10.100 Wed (UTC-07:00|PDT) 1625098030100', true, true, 3, 3, 0, 3, 3, 0, 3, 3, 3, 0, 3, 0, 0, 0, 0, 3, 3, 0, 3, 1, 0, 1, 0, 0, 0, 0, 0, 0, 2, 0, 2
+'2021-06-30T17:07:16.016 Wed (UTC-07:00|PDT) 1625098036016', true, true, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+'2021-06-30T17:07:34.556 Wed (UTC-07:00|PDT) 1625098054556', true, true, 8, 8, 0, 8, 8, 9, 17, 8, 8, 9, 17, 0, 0, 0, 0, 8, 8, 9, 17, 0, 8, 8, 1, 1, 2, 0, 0, 0, 7, 0, 7
+'2021-06-30T17:08:03.089 Wed (UTC-07:00|PDT) 1625098083089', true, true, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0
+'2021-06-30T17:08:25.502 Wed (UTC-07:00|PDT) 1625098105502', true, true, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+'2021-06-30T17:22:05.271 Wed (UTC-07:00|PDT) 1625098925271', true, true, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+'2021-06-30T17:25:41.240 Wed (UTC-07:00|PDT) 1625099141240', true, true, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+'2021-06-30T17:49:18.356 Wed (UTC-07:00|PDT) 1625100558356', true, true, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+'2021-06-30T17:51:08.959 Wed (UTC-07:00|PDT) 1625100668959', true, true, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+'2021-06-30T17:54:07.795 Wed (UTC-07:00|PDT) 1625100847795', true, true, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+'2021-06-30T17:54:13.364 Wed (UTC-07:00|PDT) 1625100853364', true, true, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+'2021-06-30T21:15:59.891 Wed (UTC-07:00|PDT) 1625112959891', true, true, 100, 100, 0, 100, 100, 0, 100, 100, 100, 0, 100, 0, 0, 0, 0, 100, 100, 0, 100, 18, 0, 18, 0, 0, 0, 0, 0, 0, 82, 0, 82

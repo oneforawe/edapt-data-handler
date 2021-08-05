@@ -1,0 +1,11 @@
+Element 0: Update date
+Element 1: Number of messages to process
+Element 2: Number that are new messages
+Element 3: Number that are old retries
+Element 4: Number of messages added to database
+Element 5: Number of failures in adding to database
+Element 6: Number of messages not recognized as data
+'2021-06-23T22:11:09.183 Wed (UTC-07:00|PDT) 1624511469183', 11, 11, 0, 0, 2, 9
+'2021-06-23T22:11:18.030 Wed (UTC-07:00|PDT) 1624511478030', 2, 0, 2, 0, 2, 0
+'2021-06-23T22:12:43.277 Wed (UTC-07:00|PDT) 1624511563277', 2, 0, 2, 2, 0, 0
+'2021-06-23T22:12:49.839 Wed (UTC-07:00|PDT) 1624511569839', 0, 0, 0, 0, 0, 0

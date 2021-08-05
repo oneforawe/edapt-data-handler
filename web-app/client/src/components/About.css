@@ -1,0 +1,38 @@
+.top-matter {
+  padding: 10px 20px 1px 20px;
+}
+
+.top-matter h4 {
+  margin-bottom: 20px;
+}
+
+.top-matter ul {
+  margin-bottom: 30px;
+  padding-left: 0;
+}
+
+.top-matter li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.top-matter .indent {
+  margin-left: 15pt;
+}
+
+.top-matter .li-title {
+  font-weight: bold;
+  color: rgb(113, 113, 113);
+}
+
+.top-matter .li-content {
+  padding-left: 10px;
+}
+
+.top-matter .bottom-spacing {
+  margin-bottom: 60px;
+}

@@ -1,0 +1,75 @@
+# Text-editor backup files
+*~
+
+# Mac Desktop Services Store customization files
+.DS_Store
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+coverage
+
+# Logs
+#*.log (some .log files are present)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+database.log
+
+# Production
+#build/
+
+# Secret Info
+credentials.json
+token*
+refreshed-token*
+
+# Private
+/2-peripherals/nginx-files/
+last-msgs-list*
+/database-api/demo-files/database-copy*
+/database-api/demo-files/edapt_db.Reports*.sql
+/email-handler/reference/auto-gen-label-ids.js
+
+# Specific files and folders
+/1-docs/WorkNotes.md
+
+# Uncomment the single-hased items to make the app
+# more protective of business info.
+# (Consider adding more files, examine files for
+# sensitive or private information.)
+
+/email-handler/auth/auth.log
+#/email-handler/helper-js/parse-email-msg.js
+#/email-handler/helper-js/mockup/
+/email-handler/reference/email-acct-info.js
+/email-handler/reference/emailMsg_MsgParseRef.txt
+/email-handler/helper-js/sample/
+/email-handler/records/email-ingestion-records.json
+/email-handler/records/updates-stats.log
+/email-handler/records/emailMsg*.txt
+/email-handler/records/records-via-records/email-ingestion-records.json
+/email-handler/records/records-via-records/email-ingestion-records*
+/email-handler/records/records-via-records/updates-stats.log
+#/email-handler/records/records-via-records/oldTroubleMsgs*
+
+/database-api/config/dbConfig.js
+#/database-api/config/table.js
+#/database-api/database-tools.js
+
+/web-app/server/app/config/users.js
+/web-app/server/app/config/auth.config.js
+/web-app/server/db-csv-file/data.csv
+#/web-app/server/app/controllers/user.controller.js
+#/web-app/client/src/components/QueryForm.js
+#/web-app/client/src/components/QueryForm.css
+#/web-app/client/src/components/QueryFormParts/

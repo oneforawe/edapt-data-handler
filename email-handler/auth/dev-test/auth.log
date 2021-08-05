@@ -1,0 +1,20 @@
+This file is for simple record-keeping of some authorization / credentialing
+activities.  The app itself does not use this file.  Delete contents at your
+discretion and leisure.
+
+'2021-06-26T00:24:07.072 Sat (UTC-07:00|PDT) 1624692247072', fail `callback` execution in `authorize`: The GmailAPI couldn't list msgs: FetchError: request to https://www.googleapis.com/gmail/v1/users/me/messages?q=after%3A%2012%2F31%2F1949 failed, reason: getaddrinfo ENOTFOUND www.googleapis.com
+'2021-06-29T00:16:30.245 Tue (UTC-07:00|PDT) 1624950990245', fail `callback` execution in `authorize`: The GmailAPI couldn't get message: Error: Missing required parameters: id
+'2021-06-29T14:39:40.197 Tue (UTC-07:00|PDT) 1625002780197', fail `callback` execution in `authorize`: The GmailAPI couldn't list msgs: Error: Invalid label: Car Wash
+'2021-06-29T14:52:20.407 Tue (UTC-07:00|PDT) 1625003540407', fail `callback` execution in `authorize`: The GmailAPI couldn't list msgs: Error: Invalid label: Car Wash
+'2021-06-29T17:53:54.685 Tue (UTC-07:00|PDT) 1625014434685', fail `callback` execution in `authorize`: The GmailAPI couldn't list labels: Error: invalid_grant
+'2021-06-29T17:58:59.903 Tue (UTC-07:00|PDT) 1625014739903', fail `callback` execution in `authorize`: The GmailAPI couldn't list labels: Error: invalid_grant
+'2021-06-29T18:00:32.192 Tue (UTC-07:00|PDT) 1625014832192', fail `callback` execution in `authorize`: The GmailAPI couldn't list labels: Error: invalid_grant
+'2021-06-29T18:03:06.315 Tue (UTC-07:00|PDT) 1625014986315', fail `callback` execution in `authorize`: The GmailAPI couldn't list labels: Error: invalid_grant
+'2021-06-29T18:31:39.664 Tue (UTC-07:00|PDT) 1625016699664', fail `callback` execution in `authorize`: The GmailAPI couldn't list labels: Error: invalid_grant
+'2021-06-29T18:52:35.027 Tue (UTC-07:00|PDT) 1625017955027', executed getNewTokenViaUserPrompt
+'2021-06-29T19:28:06.465 Tue (UTC-07:00|PDT) 1625020086465', executed getNewTokenViaUserPrompt
+'2021-06-29T19:42:53.719 Tue (UTC-07:00|PDT) 1625020973719', executed getNewTokenViaUserPrompt
+'2021-06-29T20:09:50.990 Tue (UTC-07:00|PDT) 1625022590990', executed getNewTokenViaUserPrompt
+'2021-06-29T20:50:57.550 Tue (UTC-07:00|PDT) 1625025057550', executed getNewTokenViaUserPrompt
+'2021-06-29T21:12:26.684 Tue (UTC-07:00|PDT) 1625026346684', executed getNewTokenViaUserPrompt
+'2021-06-29T23:31:54.379 Tue (UTC-07:00|PDT) 1625034714379', executed getNewTokenViaUserPrompt (via listMessageIDsAfter)
