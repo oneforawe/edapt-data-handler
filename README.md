@@ -22,6 +22,9 @@ EDAPT is particularly useful for people operating an automated self-serve
 business (such as a car wash) that has auto-generated (sales report) data sent
 by email on a daily basis.
 
+Demo:  
+<a href="https://www.edapt.datalux.xyz/">EDAPT @ datalux</a>
+
 
 ## Requirements for Set-Up
 
