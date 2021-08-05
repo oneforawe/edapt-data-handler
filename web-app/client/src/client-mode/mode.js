@@ -1,5 +1,5 @@
 const clientIsInExampleMode = false
-const clientIsInDemoMode = false
+const clientIsInDemoMode = true
 
 
 const clientModeExports = { clientIsInExampleMode, clientIsInDemoMode }
