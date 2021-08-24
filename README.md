@@ -1,8 +1,8 @@
 # EDAPT Data Handler
 
 EDAPT = Email-Data Assistant & Processor Tool:  
-A Web-App for Data Ingestion via Email and Data Viewing & Downloading via
-Website
+A data handler for business sales email -- a web-app for database ingestion via
+email and data viewing & downloading via website.
 
 The Problem:  
 If you have regularly-generated data-containing email messages that you'd like
