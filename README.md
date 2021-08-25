@@ -4,6 +4,9 @@ EDAPT = Email-Data Assistant & Processor Tool:
 A data handler for business sales email -- a web-app for database ingestion via
 email and data viewing & downloading via website.
 
+Demo:  
+<a href="https://www.edapt.datalux.xyz/">EDAPT @ datalux</a>
+
 The Problem:  
 If you have regularly-generated data-containing email messages that you'd like
 to have automatically processed so that you can easily query the data and
@@ -21,9 +24,6 @@ Example:
 EDAPT is particularly useful for people operating an automated self-serve
 business (such as a car wash) that has auto-generated (sales report) data sent
 by email on a daily basis.
-
-Demo:  
-<a href="https://www.edapt.datalux.xyz/">EDAPT @ datalux</a>
 
 
 ## Requirements for Set-Up
