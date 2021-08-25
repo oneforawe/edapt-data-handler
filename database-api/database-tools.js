@@ -494,7 +494,7 @@ function objToArray(resultObj) {
 
 
   const qtyTypes = ['netSales', 'netMoney', 'vehicles']
-  const qtyTitles = ['Net Revenue', 'Net Income', 'Vehicles']
+  const qtyTitles = ['Net Sales', 'Net Revenue', 'Vehicles']
   const qtySubTypes = [
     ['combined', 'cash', 'credit'],
     ['combined', 'cash', 'credit', 'unRefunded'],
