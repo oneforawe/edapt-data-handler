@@ -7,9 +7,11 @@ import './Query.css'
 
 // See also notes in QueryForm.js
 /**
- * NOTE: By default, show both aggregates and per-day quantities.
- * TODO: Fix `react-datepicker` click-away problem.  (I want to be able to
- *       click on the label or to the right of the field to click-out.)
+ * NOTES:    By default, show both aggregates and per-day quantities.
+ *           Some of the display is defined in `database-tools.js` in the
+ *           `database-api`.  EG: `qtyTitles` and `qtySubTypeTitles`.
+ * TODO:     Fix `react-datepicker` click-away problem.  (I want to be able to
+ *           click on the label or to the right of the field to click-out.)
  * UPGRADE: Later, import the selection numbers (N days ago) from elsewhere and
  * have it editable by user (ie, enable "add number", "remove number" from the
  * list).
