@@ -28,6 +28,23 @@ active) <br/>
 
 <br/>
 
+## EDAPT
+
+For top-level dev work, see the npm scripts in <code>package.json</code>. For
+example: <br/>
+<code>npm run install-all</code> <br/>
+<code>npm run build-prod</code> <br/>
+<code>npm run serve-prod</code> <br/>
+<code>npm run build-demo</code> <br/>
+<code>npm run serve-demo</code>
+
+A couple tests: <br/>
+<code>node database-api/test-runs/test-run-example.js</code> <br/>
+<code>node email-handler/test-runs/test-run.js</code>
+
+
+<br/>
+
 ## SystemD
 
 Example systemd service units: <br/>
