@@ -1,5 +1,5 @@
 import React from 'react'
-import { setQueryInput } from '../../actions/query'
+import { setQueryInput } from '../../../actions/query'
 import { Form } from 'semantic-ui-react'
 import {
   Accordion,
