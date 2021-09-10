@@ -20,7 +20,7 @@ export default function query(state = initialState, action) {
     case QUERY_INPUT_SET:
       return {
         ...state,
-        queryInput: payload,
+        queryInput: payload.queryInput,
       }
     case QUERY_START:
       return {

@@ -4,8 +4,11 @@ import {
 import UserService from '../services/user.service'
 
 
-export const setQueryInput = () => {
-
+export const setQueryInput = (queryInput) => (dispatch) => {
+  dispatch({
+    type: QUERY_INPUT_SET,
+    payload: { queryInput },
+  })
 }
 
 export const getQueryResults = (dbQueryObj) => (dispatch) => {
