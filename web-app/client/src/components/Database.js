@@ -57,7 +57,6 @@ const Database = () => {
         ) : (
           <QueryForm
             isQuerying={isQuerying}
-            today={today}
           />
         )}
 

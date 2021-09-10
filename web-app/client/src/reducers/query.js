@@ -1,12 +1,6 @@
 import { QUERY_START, QUERY_SUCCESS, QUERY_FAIL } from '../actions/types'
+import initialState from './queryInit'
 
-
-const initialState = {
-  isQuerying: false,
-  query: null,
-  queryResult: null,
-  queryFailed: false,
-}
 
 export default function query(state = initialState, action) {
   const { type, payload } = action
