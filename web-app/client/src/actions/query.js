@@ -1,6 +1,12 @@
-import { QUERY_START, QUERY_SUCCESS, QUERY_FAIL, SET_MESSAGE } from './types'
+import {
+  QUERY_INPUT_SET, QUERY_START, QUERY_SUCCESS, QUERY_FAIL, SET_MESSAGE
+} from './types'
 import UserService from '../services/user.service'
 
+
+export const setQueryInput = () => {
+
+}
 
 export const getQueryResults = (dbQueryObj) => (dispatch) => {
   dispatch({
