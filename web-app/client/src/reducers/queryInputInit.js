@@ -1,51 +1,6 @@
 import { clientIsInDemoMode } from '../client-mode/mode'
 
 
-function getDemoInit() {
-
-  const demoToday = new Date('7/25/21')
-  let demoYesterday = new Date(demoToday)
-  let demoWeekAgo = new Date(demoToday)
-  demoYesterday.setDate(demoToday.getDate() - 1)
-  demoWeekAgo.setDate(demoToday.getDate() - 7)
-
-  const demoTimeOptionsInit = {
-    today: demoToday, // not mod'd by user/form, used by back-end server query
-    yesterday: demoYesterday, // ditto
-    daysAgo: '7',
-    intvlStart: demoWeekAgo,
-    intvlFinal: demoYesterday,
-    reportDate: demoYesterday,
-    timeSearchSel: ['byNdays'],
-  }
-
-  return demoTimeOptionsInit
-
-}
-
-let yesterday = new Date(today)
-let weekAgo = new Date(today)
-yesterday.setDate(today.getDate() - 1)
-weekAgo.setDate(today.getDate() - 7)
-
-let timeOptionsInit = {
-  today,     // not modified by user/form, used by back-end server query
-  yesterday, // not modified by user/form, used by back-end server query
-  daysAgo: '7',
-  intvlStart: weekAgo,
-  intvlFinal: yesterday,
-  reportDate: yesterday,
-  timeSearchSel: ['byNdays'],
-}
-
-if (clientIsInDemoMode) { timeOptionsInit = getDemoInit() }
-
-const queryInit = {
-  bayOption: 'both',
-  quantities: quantitiesInit,
-  timeOptions: timeOptionsInit,
-}
-
 // Could have / should have used an array structure instead. See example below.
 const quantitiesInit = {
     netSales: {
@@ -61,17 +16,8 @@ const quantitiesInit = {
     },
 }
 
-const initialState = {
-  isQuerying: false,
-  query: null,
-  queryResult: null,
-  queryFailed: false,
-}
-
-export default initialState
-
-
-// Alternative array structure:
+// Alternative array structure for quantities:
+//
 // const quantitiesInit = [
 //   {
 //     title: 'Net Sales',
@@ -105,3 +51,54 @@ export default initialState
 //     ],
 //   },
 // ]
+
+
+function getDemoTimeInit() {
+
+  const demoToday = new Date('7/25/21')
+  let demoYesterday = new Date(demoToday)
+  let demoWeekAgo = new Date(demoToday)
+  demoYesterday.setDate(demoToday.getDate() - 1)
+  demoWeekAgo.setDate(demoToday.getDate() - 7)
+
+  const demoTimeOptionsInit = {
+    today: demoToday, // not mod'd by user/form, used by back-end server query
+    yesterday: demoYesterday, // ditto
+    daysAgo: '7',
+    intvlStart: demoWeekAgo,
+    intvlFinal: demoYesterday,
+    reportDate: demoYesterday,
+    timeSearchSel: ['byNdays'],
+  }
+
+  return demoTimeOptionsInit
+}
+
+
+const today = new Date()
+let yesterday = new Date(today)
+let weekAgo = new Date(today)
+yesterday.setDate(today.getDate() - 1)
+weekAgo.setDate(today.getDate() - 7)
+
+let timeOptionsInit = {
+  today,     // not modified by user/form, used by back-end server query
+  yesterday, // not modified by user/form, used by back-end server query
+  daysAgo: '7',
+  intvlStart: weekAgo,
+  intvlFinal: yesterday,
+  reportDate: yesterday,
+  timeSearchSel: ['byNdays'],
+}
+
+if (clientIsInDemoMode) { timeOptionsInit = getDemoTimeInit() }
+
+
+const queryInputInit = {
+  bayOption: 'both',
+  quantities: quantitiesInit,
+  timeOptions: timeOptionsInit,
+}
+
+
+export default queryInputInit

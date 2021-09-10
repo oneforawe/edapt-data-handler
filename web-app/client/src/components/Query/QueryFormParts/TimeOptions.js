@@ -16,8 +16,20 @@ import 'react-datepicker/dist/react-datepicker.css'
 import '../Query.css'
 
 
+const daysAgoOptions = [
+  { value: '14', label: '14' },
+  { value: '7',  label: '7' },
+  { value: '6',  label: '6' },
+  { value: '5',  label: '5' },
+  { value: '4',  label: '4' },
+  { value: '3',  label: '3' },
+  { value: '2',  label: '2' },
+  { value: '1',  label: '1' },
+]
+
+
 const TimeOptions = ({timeOptionsInput}) => {
-  const { queryInput, setQueryInput, daysAgoOptions } = timeOptionsInput
+  const { queryInput, setQueryInput } = timeOptionsInput
   const { timeOptions } = queryInput
   const {
     // yesterday, daysAgo,

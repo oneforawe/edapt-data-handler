@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { getQueryResults } from '../../actions/query'
 import { Form } from 'semantic-ui-react'
 import './Query.css'
@@ -7,8 +7,6 @@ import './Query.css'
 import TimeOptions       from './QueryFormParts/TimeOptions'
 import BayOptions        from './QueryFormParts/BayOptions'
 import QuantitiesOptions from './QueryFormParts/QuantitiesOptions'
-
-
 
 /**
  * NOTE: By default, show both aggregates and per-day quantities.
@@ -22,27 +20,10 @@ import QuantitiesOptions from './QueryFormParts/QuantitiesOptions'
  */
 
 
-const daysAgoOptions = [
-  { value: '14', label: '14' },
-  { value: '7',  label: '7' },
-  { value: '6',  label: '6' },
-  { value: '5',  label: '5' },
-  { value: '4',  label: '4' },
-  { value: '3',  label: '3' },
-  { value: '2',  label: '2' },
-  { value: '1',  label: '1' },
-]
-
-
 const QueryForm = ({isQuerying}) => {
 
-
-  const [queryInput, setQueryInput] = useState(queryInit)
+  const { queryInput } = useSelector(state => state.query)
   const dispatch = useDispatch()
-
-  const bayOptionsInput =  { queryInput, setQueryInput }
-  const qntsOptionsInput = { queryInput, setQueryInput }
-  const timeOptionsInput = { queryInput, setQueryInput, daysAgoOptions }
 
   const handleQuery = (e) => {
     e.preventDefault()
@@ -56,10 +37,10 @@ const QueryForm = ({isQuerying}) => {
         onSubmit={handleQuery}
       >
         <div className="side-by-side">
-          <BayOptions bayOptionsInput={bayOptionsInput} />
-          <QuantitiesOptions qntsOptionsInput={qntsOptionsInput} />
+          <BayOptions queryInput={queryInput} />
+          <QuantitiesOptions queryInput={queryInput} />
         </div>
-        <TimeOptions timeOptionsInput={timeOptionsInput} />
+        <TimeOptions queryInput={queryInput} />
         <button
           id="submit-query"
           type="submit"
@@ -72,9 +53,6 @@ const QueryForm = ({isQuerying}) => {
     </div>
   )
 }
-
-
-
 
 
 export default QueryForm

@@ -1,11 +1,27 @@
-import { QUERY_START, QUERY_SUCCESS, QUERY_FAIL } from '../actions/types'
-import initialState from './queryInit'
+import {
+  QUERY_INPUT_SET, QUERY_START, QUERY_SUCCESS, QUERY_FAIL
+} from '../actions/types'
+import queryInputInit from './queryInputInit'
+
+
+const initialState = {
+  queryInput: queryInputInit,
+  isQuerying: false,
+  query: null,
+  queryResult: null,
+  queryFailed: false,
+}
 
 
 export default function query(state = initialState, action) {
   const { type, payload } = action
 
   switch (type) {
+    case QUERY_INPUT_SET:
+      return {
+        ...state,
+        queryInput: payload,
+      }
     case QUERY_START:
       return {
         ...state,
