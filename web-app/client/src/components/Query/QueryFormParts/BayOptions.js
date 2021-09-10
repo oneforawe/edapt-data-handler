@@ -1,11 +1,12 @@
 import React from 'react'
+import { setQueryInput } from '../../actions/query'
 import { Form } from 'semantic-ui-react'
 import { produce } from 'immer'
 import '../Query.css'
 
 
-const BayOptions = ({bayOptionsInput}) => {
-  const { queryInput, setQueryInput } = bayOptionsInput
+const BayOptions = ({queryInput}) => {
+
   const { bayOption } = queryInput
 
   const setBayOption = (value) => {

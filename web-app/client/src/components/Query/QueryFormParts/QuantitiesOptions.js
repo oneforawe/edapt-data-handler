@@ -1,12 +1,12 @@
 import React from 'react'
+import { setQueryInput } from '../../actions/query'
 import { Form } from 'semantic-ui-react'
 import { produce } from 'immer'
 import '../Query.css'
 
 
-const QuantitiesOptions = ({qntsOptionsInput}) => {
+const QuantitiesOptions = ({queryInput}) => {
 
-  const { queryInput, setQueryInput } = qntsOptionsInput
   const { quantities } = queryInput
   const { netSales, netMoney, vehicles } = quantities
 
