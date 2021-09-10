@@ -2,9 +2,6 @@ import React from 'react'
 import moment from 'moment'
 import './Query.css'
 
-// dev:
-//const util = require('util')
-
 // See also notes in QueryForm.js
 /**
  * NOTES:    By default, show both aggregates and per-day quantities.
@@ -24,10 +21,6 @@ import './Query.css'
 const QueryResult = ({queryResult}) => {
 
   const resultArr = JSON.parse(queryResult)
-  // dev:
-  // console.log('')
-  // console.log('resultArr:')
-  // console.log(util.inspect(resultArr, false, null, true /* enable colors */))
 
   const bayOption  = resultArr[0].content
   const timeOption = resultArr[1].content
@@ -36,7 +29,6 @@ const QueryResult = ({queryResult}) => {
   const bayMessage  = generateBayMessage(bayOption)
   const timeMessage = generateTimeMessage(timeOption)
   const qtyDisplay  = getQtyDisplay(qtyResults)
-
 
   //    quantities: {
   //      netSales: {
