@@ -1,18 +1,23 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { setQueryInput } from '../../../actions/query'
-import { Form } from 'semantic-ui-react'
 import { produce } from 'immer'
+import { Form } from 'semantic-ui-react'
 import '../Query.css'
+
+const bayOptionValues = [ 'both', '1', '2' ]
 
 
 const BayOptions = ({queryInput}) => {
 
   const { bayOption } = queryInput
+  const dispatch = useDispatch()
 
   const setBayOption = (value) => {
-    setQueryInput( produce(draftState => {
+    const newQueryInput = produce(queryInput, (draftState) => {
       draftState.bayOption = value
-    }) )
+    })
+    dispatch(setQueryInput(newQueryInput))
   }
 
   return (
@@ -24,44 +29,20 @@ const BayOptions = ({queryInput}) => {
 
       <div className="query-option-space">
 
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="radio"
-            id="both"
-            checked={bayOption === 'both'}
-            onChange={() => setBayOption('both')}
-          />
-          <label className="form-check-label" htmlFor="both">
-            both
-          </label>
-        </div>
-
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="radio"
-            id="1"
-            checked={bayOption === '1'}
-            onChange={() => setBayOption('1')}
-          />
-          <label className="form-check-label" htmlFor="1">
-            1
-          </label>
-        </div>
-
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="radio"
-            id="2"
-            checked={bayOption === '2'}
-            onChange={() => setBayOption('2')}
-          />
-          <label className="form-check-label" htmlFor="2">
-            2
-          </label>
-        </div>
+        {bayOptionValues.map((value, index) => (
+          <div className="form-check" key={`bayOption-${index}`}>
+            <input
+              className="form-check-input"
+              type="radio"
+              id={value}
+              checked={bayOption === value}
+              onChange={() => setBayOption(value)}
+            />
+            <label className="form-check-label" htmlFor="both">
+              {value}
+            </label>
+          </div>
+        ))}
 
       </div>
 

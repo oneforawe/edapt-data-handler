@@ -1,5 +1,7 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { setQueryInput } from '../../../actions/query'
+import { produce } from 'immer'
 import { Form } from 'semantic-ui-react'
 import {
   Accordion,
@@ -10,7 +12,6 @@ import {
 } from 'react-accessible-accordion'
 import Select from 'react-select'
 import DatePicker from 'react-datepicker'
-import { produce } from 'immer'
 
 import 'react-accessible-accordion/dist/fancy-example.css'
 import 'react-datepicker/dist/react-datepicker.css'
@@ -38,11 +39,13 @@ const TimeOptions = ({queryInput}) => {
   } = timeOptions
   // Although `daysAgo` is not extracted, it is manipulated by the form.
   // The parameters `today` and `yesterday`, however, are not manipulated.
+  const dispatch = useDispatch()
 
   const setTimeOption = (selection, value) => {
-    setQueryInput( produce(draftState => {
+    const newQueryInput = produce(queryInput, (draftState) => {
       draftState.timeOptions[selection] = value
-    }) )
+    })
+    dispatch(setQueryInput(newQueryInput))
   }
 
   const timeItems = [{}, {}, {}]

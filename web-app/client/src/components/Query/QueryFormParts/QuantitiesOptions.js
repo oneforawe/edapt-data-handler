@@ -1,7 +1,8 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { setQueryInput } from '../../../actions/query'
-import { Form } from 'semantic-ui-react'
 import { produce } from 'immer'
+import { Form } from 'semantic-ui-react'
 import '../Query.css'
 
 
@@ -9,12 +10,14 @@ const QuantitiesOptions = ({queryInput}) => {
 
   const { quantities } = queryInput
   const { netSales, netMoney, vehicles } = quantities
+  const dispatch = useDispatch()
 
   const toggleQtySel = (category, selection) => {
-    setQueryInput( produce(draftState => {
+    const newQueryInput = produce(queryInput, (draftState) => {
       draftState.quantities[category][selection] =
         !draftState.quantities[category][selection]
-    }) )
+    })
+    dispatch(setQueryInput(newQueryInput))
   }
 
   const toggleQtyAll = () => {
@@ -24,24 +27,15 @@ const QuantitiesOptions = ({queryInput}) => {
         numSelected += bool
       }
     }
-    if (numSelected >= 8) {
-      setQueryInput( produce(draftState => {
-        for (let [qtyType, qtyObj] of Object.entries(draftState.quantities)) {
-          for (let qty of Object.keys(qtyObj)) {
-            draftState.quantities[qtyType][qty] = false
-          }
+    const valueForAllQty = numSelected < 8 ? true : false
+    const newQueryInput = produce(queryInput, (draftState) => {
+      for (let [qtyType, qtyObj] of Object.entries(draftState.quantities)) {
+        for (let qty of Object.keys(qtyObj)) {
+          draftState.quantities[qtyType][qty] = valueForAllQty
         }
-      }) )
-    }
-    else {
-      setQueryInput( produce(draftState => {
-        for (let [qtyType, qtyObj] of Object.entries(draftState.quantities)) {
-          for (let qty of Object.keys(qtyObj)) {
-            draftState.quantities[qtyType][qty] = true
-          }
-        }
-      }) )
-    }
+      }
+    })
+    dispatch(setQueryInput(newQueryInput))
   }
 
   return (<div>
