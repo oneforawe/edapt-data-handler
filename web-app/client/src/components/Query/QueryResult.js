@@ -122,9 +122,7 @@ function getQtyDisplay(qtyResults) {
         {el.title}
       </div>
       <div className="quantity-sub-content">
-        <div>
-          {getQtySubContentDisplay(el.content)}
-        </div>
+        {getQtySubContentDisplay(el.content)}
       </div>
     </div>
   ))
