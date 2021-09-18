@@ -1,0 +1,55 @@
+.title-sec-1 { grid-area: title-sec-1; }
+.input-sec-1 { grid-area: input-sec-1; }
+.title-sec-2 { grid-area: title-sec-2; }
+.input-sec-2 { grid-area: input-sec-2; }
+.title-sec-3 { grid-area: title-sec-3; }
+.input-sec-3 { grid-area: input-sec-3; }
+.input-sec-4 { grid-area: input-sec-4; }
+
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: max-content auto;
+  grid-template-areas:
+    "title-sec-1 input-sec-1"
+    "title-sec-2 input-sec-2"
+    "title-sec-3 input-sec-3"
+    "........... input-sec-4";
+  justify-content: start;
+  align-content: end;
+}
+
+/*
+.query-sub-sub-title {
+}
+*/
+
+.qty-input-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.query-sub-sub-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.query-sub-sub-list > * {
+  margin-right: 15px;
+}
+
+
+.form-check-label {
+  margin: 0;
+}
+
+.query-quantities-toggle-button {
+  border: 1px solid var(--border-gray-toggle);
+}

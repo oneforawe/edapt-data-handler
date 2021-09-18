@@ -4,6 +4,7 @@ import { setQueryInput } from '../../../actions/query'
 import { produce } from 'immer'
 import { Form } from 'semantic-ui-react'
 import '../Query.css'
+import './BayOptions.css'
 
 const bayOptionValues = [ 'both', '1', '2' ]
 
@@ -21,16 +22,16 @@ const BayOptions = ({queryInput}) => {
   }
 
   return (
-    <Form.Field className="boxed">
+    <Form.Field className="boxed upper-level">
 
       <div className="query-sub-title">
         Bays
       </div>
 
-      <div className="query-option-space">
+      <div className="query-option-space bay">
 
         {bayOptionValues.map((value, index) => (
-          <div className="form-check" key={`bayOption-${index}`}>
+          <div className="form-check bay" key={`bayOption-${index}`}>
             <input
               className="form-check-input"
               type="radio"

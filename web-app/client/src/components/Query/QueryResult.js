@@ -1,6 +1,7 @@
 import React from 'react'
 import moment from 'moment'
 import './Query.css'
+import './QueryResult.css'
 
 // See also notes in QueryForm.js
 /**
@@ -55,30 +56,17 @@ const QueryResult = ({queryResult}) => {
 
   return (
     <div className="query-section-container">
-      <div className="query-section">
-        <div className="boxed">
+      <div className="query-section results">
+        <div className="boxed upper-level">
           <div className="query-sub-title">
             <span>{bayMessage} -- {timeMessage}</span>
           </div>
-          <div className="query-option-space">
+          <div className="query-result-space">
             {qtyDisplay}
-            {/* {resultDisplayDeepArr.map((el, i) => (
-                <div key={i}>
-                  <h3>{el.title}</h3>
-                  {el.content[i].content.map((subEl, j) => (<div key={j}>at {i} {j}</div>)
-                  )}
-                </div>
-            ))} */}
           </div>
         </div>
       </div>
-      <hr/>
-      {/* <div>
-        <span>Stringy:</span>
-        {queryResult}
-      </div> */}
     </div>
-
   )
 }
 
@@ -149,7 +137,7 @@ function getQtySubContentDisplay(arr) {
         {el.title}
       </div>
       <div className="quantity-sub-sub-content">
-        <div className="quantity-sub-sub-net boxed">
+        <div className="quantity-sub-sub-net boxed inner-result-container">
           {/* NET */}
           <div className="on-top-title">
             {el.content[0].title}
@@ -160,7 +148,7 @@ function getQtySubContentDisplay(arr) {
             </div>
           </div>
         </div>
-        <div className="quantity-sub-sub-per-day boxed">
+        <div className="quantity-sub-sub-per-day boxed inner-result-container">
           {/* PER DAY */}
           <div className="on-top-title">
             {el.content[1].title}

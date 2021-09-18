@@ -16,6 +16,7 @@ import DatePicker from 'react-datepicker'
 import 'react-accessible-accordion/dist/fancy-example.css'
 import 'react-datepicker/dist/react-datepicker.css'
 import '../Query.css'
+import './TimeOptions.css'
 
 
 const daysAgoOptions = [

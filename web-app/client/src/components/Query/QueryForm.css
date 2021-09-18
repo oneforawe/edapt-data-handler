@@ -1,0 +1,23 @@
+.side-by-side {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 15px;
+}
+
+.side-by-side > * {
+  width: fit-content;
+}
+/*
+.side-by-side > :first-child {
+  width: max-content;
+}
+.side-by-side > :last-child {
+  width: 40%;
+  flex-grow: 1;
+}
+*/

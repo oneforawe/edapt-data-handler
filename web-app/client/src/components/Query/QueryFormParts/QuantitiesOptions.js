@@ -4,12 +4,66 @@ import { setQueryInput } from '../../../actions/query'
 import { produce } from 'immer'
 import { Form } from 'semantic-ui-react'
 import '../Query.css'
+import './QuantitiesOptions.css'
+
+const qtyOptionsValues = [
+  {
+    type: 'netSales', title: 'Net Sales',
+    subTypeSets: [
+      { set: 1,
+        subtypes: [
+          { subtype: 'combined', title: 'combined' },
+          { subtype: 'cash',     title: 'cash' },
+          { subtype: 'credit',   title: 'credit' },
+        ]
+      }
+    ]
+  },
+  {
+    type: 'netMoney', title: 'Net Revenue',
+    subTypeSets: [
+      { set: 1,
+        subtypes: [
+          { subtype: 'combined',   title: 'combined' },
+          { subtype: 'cash',       title: 'cash' },
+          { subtype: 'credit',     title: 'credit' },
+          { subtype: 'unRefunded', title: 'unrefunded' },
+        ]
+      }
+    ]
+  },
+  {
+    type: 'vehicles', title: 'Vehicles',
+    subTypeSets: [
+      { set: 1,
+        subtypes: [
+          { subtype: 'combined', title: 'combined' },
+        ]
+      },
+      { set: 2,
+        subtypes: [
+          { subtype: 'cash',     title: 'cash' },
+          { subtype: 'credit',   title: 'credit' },
+          { subtype: 'account',  title: 'account' },
+          { subtype: 'employee', title: 'employee' },
+        ]
+      },
+      { set: 3,
+        subtypes: [
+          { subtype: 'works',    title: 'works' },
+          { subtype: 'premium',  title: 'premium' },
+          { subtype: 'deluxe',   title: 'deluxe' },
+          { subtype: 'express',  title: 'express' },
+        ]
+      }
+    ]
+  },
+]
 
 
 const QuantitiesOptions = ({queryInput}) => {
 
   const { quantities } = queryInput
-  const { netSales, netMoney, vehicles } = quantities
   const dispatch = useDispatch()
 
   const toggleQtySel = (category, selection) => {
@@ -39,251 +93,66 @@ const QuantitiesOptions = ({queryInput}) => {
   }
 
   return (<div>
-    <Form.Field className="boxed">
+    <Form.Field className="boxed upper-level">
 
       <div className="query-sub-title">
         Quantities
       </div>
 
-      <div className="query-option-space">
+      <div className="query-option-space grid-container">
 
-        <div className="query-sub-option-space">
-          <div className="query-sub-sub-title">
-            Net Sales
-          </div>
-          <div className="query-sub-sub-list">
-            <div className="form-check">
-              <input
-                className="form-check-input checkbox"
-                type="checkbox"
-                id="net-sales"
-                checked={netSales.combined === true}
-                onChange={() => toggleQtySel('netSales', 'combined')}
-              />
-              <label className="form-check-label" htmlFor="net-sales">
-                combined
-              </label>
+        {qtyOptionsValues.map((value, index) => (
+          <React.Fragment key={`sub-sub-sec-${index+1}`}>
+            <div className={`query-sub-sub-title title-sec-${index+1}`}>
+              {value.title}
             </div>
-            <div className="form-check">
-              <input
-                className="form-check-input checkbox"
-                type="checkbox"
-                id="net-sales-cash"
-                checked={netSales.cash === true}
-                onChange={() => toggleQtySel('netSales', 'cash')}
-              />
-              <label className="form-check-label" htmlFor="net-sales-cash">
-                cash
-              </label>
-            </div>
-            <div className="form-check">
-              <input
-                className="form-check-input checkbox"
-                type="checkbox"
-                id="net-sales-credit"
-                checked={netSales.credit === true}
-                onChange={() => toggleQtySel('netSales', 'credit')}
-              />
-              <label className="form-check-label" htmlFor="net-sales-credit">
-                credit
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div className="query-sub-option-space">
-          <div className="query-sub-sub-title">
-            Net Money
-          </div>
-          <div className="query-sub-sub-list">
-            <div className="form-check">
-              <input
-                className="form-check-input checkbox"
-                type="checkbox"
-                id="net-money-comb"
-                checked={netMoney.combined === true}
-                onChange={() => toggleQtySel('netMoney', 'combined')}
-              />
-              <label className="form-check-label" htmlFor="net-money-comb">
-                combined
-              </label>
-            </div>
-            <div className="form-check">
-              <input
-                className="form-check-input checkbox"
-                type="checkbox"
-                id="net-money-cash"
-                checked={netMoney.cash === true}
-                onChange={() => toggleQtySel('netMoney', 'cash')}
-              />
-              <label className="form-check-label" htmlFor="net-money-cash">
-                cash
-              </label>
-            </div>
-            <div className="form-check">
-              <input
-                className="form-check-input checkbox"
-                type="checkbox"
-                id="net-money-credit"
-                checked={netMoney.credit === true}
-                onChange={() => toggleQtySel('netMoney', 'credit')}
-              />
-              <label className="form-check-label" htmlFor="net-money-credit">
-                credit
-              </label>
-            </div>
-            <div className="form-check">
-              <input
-                className="form-check-input checkbox"
-                type="checkbox"
-                id="net-money-unref"
-                checked={netMoney.unRefunded === true}
-                onChange={() => toggleQtySel('netMoney', 'unRefunded')}
-              />
-              <label className="form-check-label" htmlFor="net-money-unref">
-                unrefunded
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div className="query-sub-option-space">
-          <div className="query-sub-sub-title">
-            Vehicles
-          </div>
-
-          <div className="query-sub-multi-list">
-
-            <div className="query-sub-sub-list">
-              <div className="form-check">
-                <input
-                  className="form-check-input checkbox"
-                  type="checkbox"
-                  id="vhcls-comb"
-                  checked={vehicles.combined === true}
-                  onChange={() => toggleQtySel('vehicles', 'combined')}
-                />
-                <label className="form-check-label" htmlFor="vhcls-comb">
-                  combined
-                </label>
-              </div>
-            </div>
-
-            <div className="query-sub-sub-list">
-              <div className="form-check">
-                <input
-                  className="form-check-input checkbox"
-                  type="checkbox"
-                  id="vhcls-cash"
-                  checked={vehicles.cash === true}
-                  onChange={() => toggleQtySel('vehicles', 'cash')}
-                />
-                <label className="form-check-label" htmlFor="vhcls-cash">
-                  cash
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  className="form-check-input checkbox"
-                  type="checkbox"
-                  id="vhcls-credit"
-                  checked={vehicles.credit === true}
-                  onChange={() => toggleQtySel('vehicles', 'credit')}
-                />
-                <label className="form-check-label" htmlFor="vhcls-credit">
-                  credit
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  className="form-check-input checkbox"
-                  type="checkbox"
-                  id="vhcls-acc"
-                  checked={vehicles.account === true}
-                  onChange={() => toggleQtySel('vehicles', 'account')}
-                />
-                <label className="form-check-label" htmlFor="vhcls-acc">
-                  account
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  className="form-check-input checkbox"
-                  type="checkbox"
-                  id="vhcls-emp"
-                  checked={vehicles.employee === true}
-                  onChange={() => toggleQtySel('vehicles', 'employee')}
-                />
-                <label className="form-check-label" htmlFor="vhcls-emp">
-                  employee
-                </label>
-              </div>
-            </div>
-
-            <div className="query-sub-sub-list">
-              <div className="form-check">
-                <input
-                  className="form-check-input checkbox"
-                  type="checkbox"
-                  id="vhcls-w"
-                  checked={vehicles.works === true}
-                  onChange={() => toggleQtySel('vehicles', 'works')}
-                />
-                <label className="form-check-label" htmlFor="vhcls-w">
-                  works
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  className="form-check-input checkbox"
-                  type="checkbox"
-                  id="vhcls-p"
-                  checked={vehicles.premium === true}
-                  onChange={() => toggleQtySel('vehicles', 'premium')}
-                />
-                <label className="form-check-label" htmlFor="vhcls-p">
-                  premium
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  className="form-check-input checkbox"
-                  type="checkbox"
-                  id="vhcls-d"
-                  checked={vehicles.deluxe === true}
-                  onChange={() => toggleQtySel('vehicles', 'deluxe')}
-                />
-                <label className="form-check-label" htmlFor="vhcls-d">
-                  deluxe
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  className="form-check-input checkbox"
-                  type="checkbox"
-                  id="vhcls-e"
-                  checked={vehicles.express === true}
-                  onChange={() => toggleQtySel('vehicles', 'express')}
-                />
-                <label className="form-check-label" htmlFor="vhcls-e">
-                  express
-                </label>
-              </div>
-            </div>
-
-            <div className="query-sub-sub-list">
-              <div>
-                <button
-                  className="query-quantities-toggle-button"
-                  type="button"
-                  onClick={() => toggleQtyAll()}
+            <div className={`qty-input-section input-sec-${index+1}`}>
+              {value.subTypeSets.map((subValue, idx) => (
+                <div
+                  className="query-sub-sub-list"
+                  key={`input-sec-${index+1}-sub-sub-list-${idx+1}`}
                 >
-                  toggle all
-                </button>
-              </div>
+                  {subValue.subtypes.map((obj, i) => (
+                    <div
+                      className="form-check qty"
+                      key={`isec-${index+1}-sslist-${idx+1}-item-${i+1}`}
+                    >
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        id={`${value.type}-${obj.subtype}`}
+                        checked={quantities[value.type][obj.subtype] === true}
+                        onChange={() =>
+                          toggleQtySel(`${value.type}`, `${obj.subtype}`)}
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor={`${value.type}-${obj.subtype}`}
+                      >
+                        {obj.subtype}
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
+          </React.Fragment>
+        ))}
 
+        <div className="qty-input-section input-sec-4">
+
+          <div className="query-sub-sub-list">
+            <div>
+              <button
+                className="query-quantities-toggle-button"
+                type="button"
+                onClick={() => toggleQtyAll()}
+              >
+                toggle all
+              </button>
+            </div>
           </div>
+
         </div>
 
       </div>

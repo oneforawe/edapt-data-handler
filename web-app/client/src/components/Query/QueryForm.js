@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getQueryResults } from '../../actions/query'
 import { Form } from 'semantic-ui-react'
 import './Query.css'
+import './QueryForm.css'
 
 import TimeOptions       from './QueryFormParts/TimeOptions'
 import BayOptions        from './QueryFormParts/BayOptions'
@@ -41,14 +42,16 @@ const QueryForm = ({isQuerying}) => {
           <QuantitiesOptions queryInput={queryInput} />
         </div>
         <TimeOptions queryInput={queryInput} />
-        <button
-          id="submit-query"
-          type="submit"
-          className="btn btn-primary btn-block"
-          disabled={isQuerying}
-        >
-          Submit
-        </button>
+        <div>
+          <button
+            id="submit-query"
+            type="submit"
+            className="btn btn-primary btn-block"
+            disabled={isQuerying}
+          >
+            Submit
+          </button>
+        </div>
       </Form>
     </div>
   )

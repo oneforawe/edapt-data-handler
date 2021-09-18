@@ -1,167 +1,52 @@
+:root {
+  --border-gray: rgba(0,0,0,.1);
+  --border-gray-toggle:             rgb(191, 191, 191);
+  --background-gray-1-light:        #f4f4f4;
+  --background-gray-2-medium-light: rgb(233, 233, 233);
+  --background-gray-3-medium-dark:  rgb(208, 208, 208);
+  --background-gray-4-dark:         rgb(191, 191, 191);
+}
+/**
+ * Color (#f4f4f4) chosen to attempt to match that of the TimeOptions react-
+ * acceessible-accordion (See file at client/node_modules/react-accessible-
+ * accordion/dist/fancy-example.css).
+ */
+
+
+.boxed {
+  border: 1px solid var(--border-gray);
+  background-color: var(--background-gray-2-medium-light);
+}
+.boxed.upper-level > * {
+  padding: 15px;
+}
+
 .query-section-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgb(233, 233, 233);
+  background-color: var(--background-gray-2-medium-light);
 }
 
 .query-section {
   width: 80%;
-  padding-bottom: 15px;
-}
-
-.query-section > * {
-  margin: 15px 0 0 0;
-}
-
-.side-by-side {
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-wrap: wrap;
-}
-
-.side-by-side > * {
-  margin-top: 15px;
-  margin-right: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 0;
 }
 
-.boxed {
-  border: 1px solid lightgray;
+.query-section > :not(:first-child) {
+  margin: 15px 0 0 0;
 }
 
-.side-by-side:last-child {
-  width: 40%;
-  flex-grow: 1;
-  border: 2px solid red;
-}
 
 .query-sub-title {
-  background-color: #f4f4f4;
-  padding: 15px;
+  background-color: var(--background-gray-1-light);
 }
 
 .query-option-space {
-  padding: 15px;
-  padding-top: 0;
-}
-
-.query-sub-option-space {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: center;
-  flex-wrap: wrap;
-}
-
-.query-sub-option-space:last-child {
-  flex-grow: 1;
-}
-
-.query-sub-sub-title {
-  margin: 15px 15px 0 0;
-}
-
-.query-sub-sub-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: flex-end;
-  flex-wrap: wrap;
-  margin-top: 5px;
-}
-
-.query-sub-sub-list > * {
-  margin-right: 15px;
-}
-
-.select {
-  width: 150px;
-  display: inline-block;
-}
-
-.input-label {
-  margin-right: 5px;
-}
-
-.checkbox {
-  margin-top: 15px;
-}
-
-.query-quantities-toggle-button {
-  margin-top: 10px;
-  border: 1px solid rgb(193, 193, 193);
-}
-
-
-.quantity-sub-division {
-  margin-top: 10px;
-}
-.quantity-sub-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-.quantity-sub-content {
-  margin-left: 10px;
-}
-.quantity-sub-sub-division {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.quantity-sub-sub-title {
-  width: 7rem;
-}
-.quantity-sub-sub-content {
-  width: 10px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-.quantity-sub-sub-content > * {
-  padding: 10px;
-}
-.quantity-sub-sub-net {
-  display: flex;
-  flex-direction: column;
-}
-.quantity-sub-sub-per-day {
-
-}
-.on-top-title {
-  font-style: italic;
-}
-.on-bottom-data {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.quantity-sub-sub-sub-division {
-  padding: 5px;
-  margin: 5px;
-}
-.net {
-  background-color: rgb(191, 191, 191);
-}
-.per-day {
-  background-color: rgb(208, 208, 208);
-}
-.day-title {
-}
-.day-datum {
-}
-
-
-
-.accordion__panel {
-    padding-top: 10px;
-    animation: fadein 0.35s ease-in;
+  background-color: var(--background-gray-2-medium-light);
 }

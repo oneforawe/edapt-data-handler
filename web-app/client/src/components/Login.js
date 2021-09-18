@@ -45,19 +45,19 @@ const Login = () => {
             <p>
               Use the following to log in:
             </p>
-            <div>
-              <table className="center-table">
-                <tbody>
-                  <tr>
-                    <td className="table-left">Username:</td>
-                    <td className="table-right">theuser</td>
-                  </tr>
-                  <tr>
-                    <td className="table-left">Password:</td>
-                    <td className="table-right">thepassword</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="single-cell-grid-container">
+              <div className="grid-cell-flex-container">
+                <div className="demo-mode-login-info flex-container">
+                  <div className="info-batch-1 flex-row">
+                    <div className="info-type">Username:</div>
+                    <div className="info-data">theuser</div>
+                  </div>
+                  <div className="info-batch-2 flex-row">
+                    <div className="info-type">Password:</div>
+                    <div className="info-data">thepassword</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
