@@ -33,10 +33,14 @@ active) <br/>
 For top-level dev work, see the npm scripts in <code>package.json</code>. For
 example: <br/>
 <code>npm run install-all</code> <br/>
+<code>npm run dev-demo</code> <br/>
 <code>npm run build-prod</code> <br/>
 <code>npm run serve-prod</code> <br/>
 <code>npm run build-demo</code> <br/>
 <code>npm run serve-demo</code>
+
+Testing front-end only (in the web-app client directory): <br/>
+<code>npm run dev</code>
 
 A couple tests: <br/>
 <code>node database-api/test-runs/test-run-example.js</code> <br/>
