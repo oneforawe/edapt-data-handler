@@ -13,6 +13,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import { LinkContainer } from 'react-router-bootstrap'
 
+import GoToTop  from './components/GoToTop'
 import Login    from './components/Login'
 import Database from './components/Database'
 import Profile  from './components/Profile'
@@ -50,6 +51,9 @@ const App = () => {
   return (
     <Router history={history}>
       <div>
+
+        {/* Scroll to top of page on arrival (ie, when route path changes). */}
+        <GoToTop/>
 
         <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg">
           <Container>

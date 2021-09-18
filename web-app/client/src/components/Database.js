@@ -6,7 +6,6 @@ import downloadIcon from '../images/download-icon.svg'
 import checkmarkIcon from '../images/check-circle-icon.svg'
 import './Database.css'
 
-import GoToTop from './GoToTop'
 import QueryForm        from './Query/QueryForm'
 import QueryFormExample from './Query/QueryFormExample'
 import QueryResult      from './Query/QueryResult'
@@ -30,9 +29,6 @@ const Database = () => {
 
   return (
     <div className="container">
-
-      {/* Scroll to top of page on arrival (ie, when route path changes). */}
-      <GoToTop/>
 
       <header className="jumbotron">
         <h3>Database</h3>
