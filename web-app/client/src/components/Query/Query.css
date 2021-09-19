@@ -1,4 +1,5 @@
 :root {
+  --border-radius: 2px;
   --border-gray: rgba(0,0,0,.2);
   --border-gray-toggle:             rgb(191, 191, 191);
   --background-gray-1-light:        #f4f4f4;
@@ -15,6 +16,7 @@
 
 .boxed {
   border: 1px solid var(--border-gray);
+  border-radius: var(--border-radius);
   background-color: var(--background-gray-2-medium-light);
 }
 .boxed.upper-level > * {

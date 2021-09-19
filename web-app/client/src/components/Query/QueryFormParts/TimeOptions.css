@@ -2,18 +2,38 @@
   --query-field-width: 120px;
 }
 
+/**
+ *  Modifying CSS from the react-acceessible-accordion files.  (See file at
+ * client/node_modules/react-accessible-accordion/dist/fancy-example.css).
+ */
 .accordion {
   background-color: var(--background-gray-2-medium-light);
 }
-
+.accordion__item + .accordion__item {
+  border-top: 1px solid var(--border-gray);
+}
 .accordion__panel {
   background-color: var(--background-gray-2-medium-light);
   padding: 5px 15px 15px 15px;
   animation: fadein 0.15s ease-in;
 }
+.accordion__button {
+  padding: 15px;
+}
+.accordion__button:hover {
+  /* reset default to have no hover effect (eg, for mobile devices). */
+  background-color: var(--background-gray-1-light);
+}
+@media(hover: hover) {
+  .accordion__button:hover {
+    background-color: #ddd;
+  }
+}
+
 
 .accordion-time-options {
   border: 1px solid var(--border-gray);
+  border-radius: var(--border-radius);
 }
 
 .input-label {
