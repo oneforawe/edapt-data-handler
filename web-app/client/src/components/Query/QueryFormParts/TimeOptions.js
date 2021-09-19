@@ -82,11 +82,12 @@ const TimeOptions = ({queryInput}) => {
       id="search-by-date-range"
     >
       <div>
-        <label>
+        <label className="date-picker-container">
           <span className="input-label">
             Start Date:
           </span>
           <DatePicker
+            className="date-picker-field"
             dateFormat="yyyy-MM-dd"
             selected={intvlStart}
             onChange={date => setTimeOption('intvlStart', date)}
@@ -99,11 +100,12 @@ const TimeOptions = ({queryInput}) => {
         </label>
       </div>
       <div>
-        <label>
+        <label className="date-picker-container">
           <span className="input-label">
             Final Date:
           </span>
           <DatePicker
+            className="date-picker-field"
             dateFormat="yyyy-MM-dd"
             selected={intvlFinal}
             onChange={date => setTimeOption('intvlFinal', date)}
@@ -121,11 +123,12 @@ const TimeOptions = ({queryInput}) => {
     <Form.Field
       id="search-by-date"
     >
-      <label>
+      <label className="date-picker-container">
         <span className="input-label">
           Date:
         </span>
         <DatePicker
+          className="date-picker-field"
           dateFormat="yyyy-MM-dd"
           selected={reportDate}
           onChange={date => setTimeOption('reportDate', date)}
@@ -138,22 +141,23 @@ const TimeOptions = ({queryInput}) => {
 
   return (
     <Accordion
+      className="accordion-time-options"
       preExpanded={timeSearchSel}
       onChange={expandedUUIDs =>
         setTimeOption('timeSearchSel', expandedUUIDs)}
     >
-        {timeItems.map((item) => (
-            <AccordionItem key={item.uuid} uuid={item.uuid}>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        {item.heading}
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  {item.content}
-                </AccordionItemPanel>
-            </AccordionItem>
-        ))}
+      {timeItems.map((item) => (
+        <AccordionItem key={item.uuid} uuid={item.uuid}>
+          <AccordionItemHeading>
+            <AccordionItemButton>
+              {item.heading}
+            </AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel>
+            {item.content}
+          </AccordionItemPanel>
+        </AccordionItem>
+      ))}
     </Accordion>
   )
 }

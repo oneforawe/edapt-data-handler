@@ -1,3 +1,7 @@
+:root {
+  --query-field-width: 120px;
+}
+
 .accordion {
   background-color: var(--background-gray-2-medium-light);
 }
@@ -8,11 +12,25 @@
   animation: fadein 0.15s ease-in;
 }
 
+.accordion-time-options {
+  border: 1px solid var(--border-gray);
+}
+
 .input-label {
   margin-right: 5px;
 }
 
 .select {
-  width: 150px;
+  width: var(--query-field-width);
   display: inline-block;
+}
+
+.date-picker-container {
+  width: fit-content;
+}
+
+.date-picker-field {
+  width: var(--query-field-width);
+  padding-left: 8px;
+  padding-right: 8px;
 }
