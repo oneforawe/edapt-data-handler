@@ -136,9 +136,9 @@ command for updating nvm.
 <code>npm init -y</code> (create and initialize a <code>package.json</code>
 file to record installed npm packages)<br/>
 <code>npm install [package]</code> (install node package in the current
-directory's module)
+directory's module) <br/>
 <code>npm ls -g --depth 0</code> (see globally installed packages for the
-currently-used version of node+npm) <br/>
+currently-used version of node+npm)
 
 
 <br/>
