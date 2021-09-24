@@ -127,15 +127,18 @@ command for updating nvm.
 ### node
 
 <code>man node</code> <br/>
-<code>node install [package]</code> (install node package in the current
-directory's module)
+<code>node [executable.js] </code> (execute code with node runtime)
 
 ### npm
 
 <code>man npm</code> <br/>
 <code>npm help</code> <br/>
+<code>npm init -y</code> (create and initialize a <code>package.json</code>
+file to record installed npm packages)<br/>
+<code>npm install [package]</code> (install node package in the current
+directory's module)
 <code>npm ls -g --depth 0</code> (see globally installed packages for the
-currently-used version of node+npm)
+currently-used version of node+npm) <br/>
 
 
 <br/>
