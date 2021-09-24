@@ -49,6 +49,19 @@ A couple tests: <br/>
 
 <br/>
 
+## SSH & SCP
+
+<code>ssh username@ip.add.re.ss</code> (log in to machine at ip.add.re.ss via
+OpenSSH from local machine; SSH = Secure SHell) <br/>
+<code>scp source target</code> (copy from source to target using OpenSSH) <br/>
+<code>scp path/to/local/src-file username@ip.add.re.ss:path/to/dest-file</code>
+(copy from local to remote) <br/>
+<code>scp username@ip.add.re.ss:path/to/dest-file path/to/local/src-file</code>
+(copy from remote to local)
+
+
+<br/>
+
 ## SystemD
 
 Example systemd service units: <br/>
@@ -81,19 +94,6 @@ See more of the tutorial for info on safely editing the service unit files and
 other topics.  For info on manually deleting services/units, see <a href=
 "https://superuser.com/questions/513159/how-to-remove-systemd-services">this
 forum post</a>.
-
-
-<br/>
-
-## SSH & SCP
-
-<code>ssh username@ip.add.re.ss</code> (log in to machine at ip.add.re.ss via
-OpenSSH from local machine; SSH = Secure SHell) <br/>
-<code>scp source target</code> (copy from source to target using OpenSSH) <br/>
-<code>scp path/to/local/src-file username@ip.add.re.ss:path/to/dest-file</code>
-(copy from local to remote) <br/>
-<code>scp username@ip.add.re.ss:path/to/dest-file path/to/local/src-file</code>
-(copy from remote to local)
 
 
 <br/>
