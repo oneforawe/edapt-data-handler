@@ -283,7 +283,7 @@ trouble-shoot if not; note that the website is now secure!  Visit and see.)
 Certbot (more) subdomains: <br/>
 See <a href="https://certbot.eff.org/docs/using.html">certbot docs</a> for more
 functionality. <br/>
-Before executing the following command, be sure to add the subdomain(s) to the
+Before executing the following two commands, be sure to add the subdomain(s) to the
 registrar DNS records, add the appropriate content to <code>/var/www/</code>,
 add the appropriate server block(s) to <code>/etc/nginx/sites-available</code>,
 link the 3 or 4 server block(s) in <code>/etc/nginx/sites-enabled</code>, check
@@ -296,7 +296,9 @@ subdomain server block must not have this setting, since setting it twice will
 cause problems.<br/>
 <code>sudo certbot --nginx certonly --cert-name example.com -d
 example.com,www.example.com,sub.example.com,www.sub.example.com</code> (to add
-certificate coverage of more subdomains beyond www)
+certificate coverage of more subdomains beyond www) <br/>
+<code>sudo systemctl reload nginx</code> (may be necessary to integrate new
+ssl settings)
 </li><br/>
 
 
