@@ -68,6 +68,7 @@ the <code>.service</code> suffix can be omitted (eg, <code>mysql</code> and
 <code>systemctl list-units | grep mysql</code> <br/>
 <code>systemctl list-unit-files</code> <br/>
 <code>systemctl cat application.service</code> (view unit file) <br/>
+<code>systemctl status application.service</code> (view status) <br/>
 <code>sudo systemctl stop application.service</code>    (current-session) <br/>
 <code>sudo systemctl start application.service</code>   (current-session) <br/>
 <code>sudo systemctl restart application.service</code> (current-session) <br/>
