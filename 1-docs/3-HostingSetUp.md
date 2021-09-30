@@ -35,12 +35,13 @@ as <code>ip.add.re.ss</code>.
 
 
 <li> DNS <br/>
-If you're using a domain (or subdomain) for hosting the app, you can now set
-up the registrar settings for name servers and DNS records.  You can use the
-registrar's own default name servers and use an A (address) record and CNAME
-(canonical name) record, replacing <code>ip.add.re.ss</code> with your server's
-IP address and using a TTL value that makes sense (perhaps 30 seconds on the
-low end for an A Record, or 1 hour, or "automatic"):
+If you're using a domain (or subdomain) for hosting the app, you can now log in
+with your registrar and create the settings for name servers and DNS records,
+as illustrated below.  You can use the registrar's own default name servers and
+use an A (address) record and CNAME (canonical name) record, replacing
+<code>ip.add.re.ss</code> with your server's IP address and using a TTL value
+that makes sense (perhaps 30 seconds on the low end for an A Record, or 1 hour,
+or "automatic"):
 
 Style 1:
 <table><tbody>
@@ -103,6 +104,18 @@ Update/Upgrade notes: <br/>
 <code>apt upgrade</code> <br/>
 <code>apt dist-upgrade</code> <br/>
 <code>do-release-upgrade</code>
+</li><br/>
+
+
+<li> Alt Access <br/>
+You can look into whether your cloud-service/server provider offers an
+alternate means of accessing your server, such as a browser console.  This
+might help if you accidentally set up a firewall that blocks SSH access,
+preventing you from logging in from your own computer via SSH.  As of the time
+of this writing, DigitalOcean provides a means of enabling a "Droplet Console"
+giving native-like terminal access to your Droplet from your browser.  It's a
+relatively quick process, where you can enable this feature by executing a
+one-line command as a root or sudo-group user.
 </li><br/>
 
 
