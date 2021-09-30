@@ -62,6 +62,27 @@ OpenSSH from local machine; SSH = Secure SHell) <br/>
 
 <br/>
 
+## UFW
+
+<code>ufw</code> = uncomplicated firewall; (see
+<a href="https://help.ubuntu.com/community/UFW">ubuntu docs</a>) <br/>
+<code>man ufw</code> <br/>
+<code>sudo ufw status</code> <br/>
+<code>sudo ufw status verbose</code> <br/>
+<code>sudo ufw app list</code> (list the available ufw apps) <br/>
+<code>sudo ufw allow [item]</code> (add an "allow" rule for
+<code>[item]</code>, where <code>[item]</code> can be a port number -- such as
+80, 443, 8080, 50000, etc -- or a ufw app such as <code>'Nginx Full'</code>)
+<br/>
+<code>sudo ufw delete allow [item]</code> (remove the "allow" rule for
+<code>[item]</code>, if it exists) <br/>
+<code>sudo ufw enable</code> (turn on the firewall, and so apply the existing
+rules) <br/>
+<code>sudo ufw disable</code> (turn off the firewall)
+
+
+<br/>
+
 ## SystemD
 
 Example systemd service units: <br/>
@@ -105,7 +126,8 @@ Nvm is optional (for development use).
 ### install/version check
 
 <code>command -V nvm</code> (note that <code>which nvm</code> does not work,
-since nvm is a shell function) <br/>
+since nvm is a shell function, and thus it will also not have a man(ual) page)
+<br/>
 <code>nvm -v</code>
 
 <code>command -V node</code> <br/>
