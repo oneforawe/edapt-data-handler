@@ -137,8 +137,8 @@ Log out and log back in to to see that it worked.
 <li> Configs <br/>
 At this point I'll usually add my own personal computer config files to make
 working with the machine more efficient and pleasing.  See my
-<a href="https://github.com/oneforawe/config-files/tree/master/setup/
-remote-machine-setup">config-files</a> github repo for instructions.  (If doing
+<a href="https://github.com/oneforawe/config-repo/tree/master/setup/
+remote-machine-setup">config-repo</a> on github for instructions.  (If doing
 this, manually copy over my gitconfig file and edit the email address.)
 Additionally, one can update the GNU/Linux system at this point (eg, using
 <code>aptup</code> in my system).
