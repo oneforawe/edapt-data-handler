@@ -3,7 +3,7 @@
  *  lot to use this file without errors.
  */
 //import require from 'requirejs'
-const {DataTypes} = require('sequelize')
+const { DataTypes } = require('sequelize')
 
 
 //const tableName = 'Users'
