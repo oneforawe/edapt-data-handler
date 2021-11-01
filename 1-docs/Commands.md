@@ -18,11 +18,13 @@ bash/notes/notes.md">notes on bash</a> for an introduction to bash and shells.
 
 When everything is situated for running in production, one can check that all
 systems are up and running with these commands: <br/>
-<code>systemclt status nginx</code> (check if loaded, enabled, and active)<br/>
-<code>systemclt status pm2-username</code> (check if loaded, enabled, and
+<code>systemctl status ufw</code> (check if loaded, enabled, and active)<br/>
+<code>systemctl status nginx</code> (check if loaded, enabled, and active)<br/>
+<code>systemctl status pm2-username</code> (check if loaded, enabled, and
 active) <br/>
-<code>systemclt status mysql</code>  (check if loaded, enabled, and active)
+<code>systemctl status mysql</code>  (check if loaded, enabled, and active)
 <br/>
+<code>ufw status</code>  (check specific settings re OpenSSH, HTTPS) <br/>
 <code>pm2 ls</code> (see that "edapt" or "edapt-demo" is online)
 
 
@@ -62,33 +64,13 @@ OpenSSH from local machine; SSH = Secure SHell) <br/>
 
 <br/>
 
-## UFW
-
-<code>ufw</code> = uncomplicated firewall; (see
-<a href="https://help.ubuntu.com/community/UFW">ubuntu docs</a>) <br/>
-<code>man ufw</code> <br/>
-<code>sudo ufw status</code> <br/>
-<code>sudo ufw status verbose</code> <br/>
-<code>sudo ufw app list</code> (list the available ufw apps) <br/>
-<code>sudo ufw allow [item]</code> (add an "allow" rule for
-<code>[item]</code>, where <code>[item]</code> can be a port number -- such as
-80, 443, 8080, 50000, etc -- or a ufw app such as <code>'Nginx Full'</code>)
-<br/>
-<code>sudo ufw delete allow [item]</code> (remove the "allow" rule for
-<code>[item]</code>, if it exists) <br/>
-<code>sudo ufw enable</code> (turn on the firewall, and so apply the existing
-rules) <br/>
-<code>sudo ufw disable</code> (turn off the firewall)
-
-
-<br/>
-
 ## SystemD
 
 Example systemd service units: <br/>
-<code>mysql</code> (<code>mysql.service</code>) <br/>
+<code>ufw</code> (<code>ufw.service</code>) <br/>
 <code>nginx</code> (<code>nginx.service</code>) <br/>
-<code>pm2-username</code> (<code>pm2-username.service</code>)
+<code>pm2-username</code> (<code>pm2-username.service</code>) <br/>
+<code>mysql</code> (<code>mysql.service</code>)
 
 See this <a href="https://www.digitalocean.com/community/tutorials/
 how-to-use-systemctl-to-manage-systemd-services-and-units">tutorial on
@@ -115,6 +97,28 @@ See more of the tutorial for info on safely editing the service unit files and
 other topics.  For info on manually deleting services/units, see <a href=
 "https://superuser.com/questions/513159/how-to-remove-systemd-services">this
 forum post</a>.
+
+
+<br/>
+
+## UFW
+
+<code>ufw</code> = uncomplicated firewall; (see
+<a href="https://help.ubuntu.com/community/UFW">ubuntu docs</a>) <br/>
+<code>man ufw</code> <br/>
+<code>sudo ufw status</code> <br/>
+<code>sudo ufw status verbose</code> <br/>
+<code>sudo ufw app list</code> (list the available ufw apps) <br/>
+<code>sudo ufw allow [item]</code> (add an "allow" rule for
+<code>[item]</code>, where <code>[item]</code> can be a port number -- such as
+80, 443, 8080, 50000, etc -- or a ufw app such as <code>'Nginx Full'</code>)
+<br/>
+<code>sudo ufw delete allow [item]</code> (remove the "allow" rule for
+<code>[item]</code>, if it exists) <br/>
+<code>sudo ufw enable</code> (turn on the firewall, and so apply the existing
+rules) <br/>
+<code>sudo ufw disable</code> (turn off the firewall) <br/>
+See above for the many systemctl commands available for ufw (ufw.service).
 
 
 <br/>
@@ -183,7 +187,8 @@ mysql repl, you may have to use either <code>sudo mysql</code> or
 <code>ps -A | grep -i mysql</code> (see all processes that involve mysql)
 
 <code>systemctl status mysql</code> (show status of daemon and session server)
-<code>sudo systemctl start mysql</code> (start daemon)
+<br/>
+<code>sudo systemctl start mysql</code> (start daemon) <br/>
 <code>sudo systemctl stop mysql</code>  (stop daemon)
 
 <code>sudo mysql</code> (enter mysql shell)
@@ -193,7 +198,7 @@ database) <br/>
 <code>sudo mysqldump database_name table_name > dump-file.sql</code> (save a
 copy of a database table) <br/>
 <code>sudo mysql < dump-file.sql</code> (restore database) <br/>
-<code>sudo mysql database_name < dump-file.sql</code> (restore table) <br/>
+<code>sudo mysql database_name < dump-file.sql</code> (restore table)
 
 ### mac os
 
