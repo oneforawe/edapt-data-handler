@@ -24,10 +24,14 @@ Nginx server blocks (more elaborate):
 /etc/nginx/sites-available/ip-address-default                (insecure)
 /etc/nginx/sites-available/example.com-static-insecure
 /etc/nginx/sites-available/example.com-static-secure
+/etc/nginx/sites-available/example.com-port-insecure-test
+/etc/nginx/sites-available/example.com-port-insecure
 /etc/nginx/sites-available/example.com-port-secure-test
 /etc/nginx/sites-available/example.com-port-secure
 /etc/nginx/sites-available/sub.example.com-static-insecure
 /etc/nginx/sites-available/sub.example.com-static-secure
+/etc/nginx/sites-available/sub.example.com-port-insecure-test
+/etc/nginx/sites-available/sub.example.com-port-insecure
 /etc/nginx/sites-available/sub.example.com-port-secure-test
 /etc/nginx/sites-available/sub.example.com-port-secure
 

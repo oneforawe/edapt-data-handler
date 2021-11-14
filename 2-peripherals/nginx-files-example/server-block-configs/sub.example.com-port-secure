@@ -1,9 +1,9 @@
 server {
 
+  server_name sub.example.com www.sub.example.com;
+
   root /var/www/sub.example.com/html;
   index index.html index.htm index.nginx-debian.html;
-
-  server_name sub.example.com www.sub.example.com;
 
   location / {
     proxy_pass http://localhost:8080;
