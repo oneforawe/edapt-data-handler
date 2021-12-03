@@ -123,9 +123,16 @@ See above for the many systemctl commands available for ufw (ufw.service).
 
 <br/>
 
-## Node (& Npm & Nvm)
+## Node (& Nvm & Npm & Npx)
 
 Nvm is optional (for development use).
+
+<code>nvm</code> - node version manager (controlling node+npm+npx) <br/>
+<code>node</code> - Node.js (a JavaScript "back-end" runtime environment) <br/>
+<code>npm</code> - node package manager (node tool to control packages for
+node) <br/>
+<code>npx</code> - node package executer (node tool to execute npm package
+binaries)
 
 ### install/version check
 
@@ -139,6 +146,9 @@ since nvm is a shell function, and thus it will also not have a man(ual) page)
 
 <code>command -V npm</code> <br/>
 <code>npm -v</code>
+
+<code>command -V npx</code> <br/>
+<code>npx -v</code>
 
 ### nvm (if using)
 
@@ -165,6 +175,14 @@ file to record installed npm packages)<br/>
 directory's module) <br/>
 <code>npm ls -g --depth 0</code> (see globally installed packages for the
 currently-used version of node+npm)
+
+### npx
+
+For reference (and not really needed for further work on this project): <br/>
+<code>man npx</code> <br/>
+<code>npx create-react-app app-name</code> <br/>
+<code>npx create-react-app app-name --template typescript</code> (if using
+TypeScript)
 
 
 <br/>
