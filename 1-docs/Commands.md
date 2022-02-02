@@ -291,6 +291,8 @@ See above for the many systemctl commands available for nginx (nginx.service).
 <code>pm2 kill</code> <br/>
 <code>pm2 ls</code> <br/>
 <code>pm2 start "code here" --name "process-name-here"</code> <br/>
+<code>pm2 start npm --name "{app_name}" -- run {script_name}</code> (for
+turning <code>npm run</code> scripts into pm2 processes) <br/>
 <code>pm2 stop process-name</code> <br/>
 <code>pm2 start process-name</code> <br/>
 <code>pm2 save</code> <br/>
