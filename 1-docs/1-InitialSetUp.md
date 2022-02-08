@@ -41,15 +41,18 @@ If you don't have node installed, you could just go to the
 you should probably consider other methods, including using a package manager.
 Here are two good options:
 <ul>
-  <li> If you intend on just using node for a one-time implementation (without
+  <li> (Not preferred for EDAPT.)
+  <p> If you intend on just using node for a one-time implementation (without
 using globally-installed npm packages), you can follow instructions from
 <a href="https://github.com/nodesource/distributions">NodeSource</a> to just
 install one version of node+npm.  If using GNU/Linux apt and NodeSource, you
 can follow step 1 in <a href="https://www.digitalocean.com/community/tutorials
 /how-to-set-up-a-node-js-application-for-production-on-ubuntu-20-04">this
 tutorial</a>.
+  </p>
   </li>
-  <li> If you intend on using node on an on-going basis during JavaScript/Node
+  <li> (Preferred for EDAPT.)
+  <p> If you intend on using node on an on-going basis during JavaScript/Node
 development (or simply want to use a globally-installed npm package), it's best
 to follow the instructions from <a href="https://github.com/nvm-sh/nvm">nvm
 (node version manager)</a> to install nvm and node+npm.  As the
@@ -58,6 +61,7 @@ resolving-eacces-permissions-errors-when-installing-packages-globally">npm
 docs</a> explain, installing node/npm with nvm "is the best way to avoid
 permissions issues".  Also, with nvm you'll be able to quickly switch between
 versions of node, if you ever need to.
+  </p>
   </li>
 </ul>
 
