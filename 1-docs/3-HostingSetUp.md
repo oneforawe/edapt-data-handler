@@ -318,8 +318,8 @@ ssl settings)
 <li> Node <br/>
 (You may want to install with nvm instead of following the instructions below;
 new edits have been made to the <a href="./1-InitialSetUp.md">Phase 1</a> notes
-that indicate this is the preferred method, given EDAPT's usage of the
-globally-installed PM2 package.)
+that indicate that using nvm is the preferred method, given EDAPT's usage of
+the globally-installed PM2 package.)
 
 This tutorial gives a high-level set of instructions that link to many of the
 steps already taken and contain instructions for the next few steps:
