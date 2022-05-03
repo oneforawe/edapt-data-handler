@@ -14,8 +14,8 @@ working for the first time.
 <li> Ensure you have <a href="https://nodejs.org/en/">node</a>:
 
 NodeJS (aka Node.js, node, etc) is a back-end runtime environment for
-JavaScript/ECMAScript, with an associated command <code>node</code>.  Note that
-with node installed, you will also have the
+JavaScript/ECMAScript, with an associated shell command <code>node</code>.
+Note that with node installed, you will also have the
 <a href="https://www.npmjs.com/">npm</a> (node package manager)
 <code>npm</code> utility at your command, which connects with an enormous
 registry of useful Node/JavaScript packages.
