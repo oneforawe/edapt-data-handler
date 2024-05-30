@@ -233,8 +233,7 @@ using domain example.com) <br/>
 <code>/etc/nginx/sites-available/ip-address-content</code>  (server block file,
 using your own <code>ip.add.re.ss</code>)
 <br/>
-<code>sudo ln -s /etc/nginx/sites-available/ip-address-content
-/etc/nginx/sites-enabled/</code>
+<code>sudo ln -s /etc/nginx/sites-available/ip-address-content /etc/nginx/sites-enabled/</code>
 <br/>
 <code>sudo nginx -t</code> <br/>
 <code>sudo systemctl reload nginx</code>  (the site should now display the
